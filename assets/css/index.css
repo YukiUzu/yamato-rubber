@@ -1,72 +1,165 @@
-#mv .sec-inner {
-  margin-top: 88px;
-  height: 955px;
-  position: relative;
-}
-#mv .sec-inner::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 49.47%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(90deg, #FFF 0%, transparent 100%);
-  z-index: -2;
-}
-#mv .sec-inner::after {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 80.57%;
-  top: 0;
-  left: 0;
-  background: #fff;
-  opacity: 0.4;
-  z-index: -1;
-}
-#mv .sec-inner .inner-bg {
-  position: absolute;
-  content: "";
-  height: 846px;
-  width: calc(100% - 470px);
-  bottom: 0;
-  left: 470px;
-  background: url(../img/index/mv-img.png) center left/auto 100% repeat-x;
-  z-index: -3;
-}
-#mv .sec-text {
-  padding-top: 144px;
-  margin: 0 7.6rem;
-  font-size: 3.6rem;
-  font-weight: 700;
-  display: flex;
-  flex-direction: column;
-}
-#mv .sec-text .pl {
-  padding-left: 22px;
-}
-#mv .sec-title {
-  margin: 226px 9.9em 0;
-  width: 100%;
-  max-width: 1059px;
+@charset "UTF-8";
+.c-subtitle-ellipse {
+  margin-bottom: 2em;
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
-#main-top #introduction .sec-inner {
-  margin-top: 190px;
-  margin-bottom: 190px;
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 999;
 }
-#main-top #introduction .sec-text {
+#loading.active .logo {
+  animation: bound-o 1s 0s both;
+}
+#loading.active .logo-line {
+  transform: scale(5);
+  opacity: 0;
+}
+#loading.active .logo-base {
+  opacity: 0;
+}
+#loading .logo {
+  position: relative;
+  width: 560px;
+  height: 392px;
+}
+#loading .logo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 2s 1.2s ease-in-out, opacity 2s 1.2s ease-in-out;
+}
+
+#mv {
+  height: 100lvh;
+}
+#mv.active .sec-title::before,
+#mv.active .sec-title::after {
+  animation: bound-o 1s 0.5s both;
+}
+#mv .sec-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  padding: calc(88px + 5lvh) 5.2vw 5lvh;
+}
+#mv .sec-text {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+#mv .sec-text span {
+  display: block;
+}
+#mv .sec-text span + span {
+  margin-top: 0.63em;
+}
+#mv .sec-text span:last-child {
+  padding-left: 0.61em;
+}
+#mv .sec-title {
+  --width: 702px;
+  position: relative;
+  width: var(--width);
+  height: calc(var(--width) * 0.349);
+  background: url(../img/common/yamatogomu-base.svg) left/contain no-repeat;
+  font-size: 0;
+  flex-shrink: 0;
+}
+#mv .sec-title::before, #mv .sec-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 83%;
+  display: block;
+  height: 46.53%;
+  width: 15.09%;
+  background: url(../img/common/yamatogomu-o.svg) center/contain no-repeat;
+}
+#mv .sec-title::after {
+  top: 53%;
+  left: 16%;
+}
+
+#bg {
+  position: fixed;
+  top: 10lvh;
+  left: 0;
+  width: 100%;
+  height: 85lvh;
+  z-index: -999;
+  opacity: 0.6;
+}
+#bg * {
+  height: 100%;
+}
+#bg::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+#bg img {
+  display: block;
+  margin: 0 4.4rem;
+}
+
+#introduction .sec-inner {
+  padding: 130px 0 190px;
+}
+#introduction .sec-text {
   font-size: 28px;
   font-weight: 700;
   line-height: 1.6;
 }
-#main-top #service {
-  padding-top: 426px;
-  position: relative;
+
+#service {
+  padding: 0;
 }
-#main-top #service::before {
-  position: absolute;
-  content: "";
+#service .sec-img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 28.59vw;
+  max-height: 549px;
+}
+#service .sec-outer {
+  padding-bottom: 120px;
+}
+#service .sec-box {
+  max-width: 1428px;
+  margin: -6.4vw auto 0;
+  padding: 112px 15px;
+}
+#service .sec-box-inner {
+  max-width: 1144px;
+  margin: 0 auto;
+}
+#service .sec-box-inner .inner-top {
   width: 100%;
-  aspect-ratio: 1920/549;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px 16px;
+  margin-bottom: 40px;
+}
+#service .sec-box-inner .texts {
+  max-width: 656px;
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */

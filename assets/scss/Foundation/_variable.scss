@@ -16,17 +16,17 @@ $font: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Go
 $font_mincho: "游明朝", YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
 $font_en: "Roboto", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 
-// $main_color: #64B5E7;
+$main_color: #64B5E7;
+$main_gradient: linear-gradient(90deg, #3A982A 0%, #008DD4 100%);
+
 $accent_color: #E81E10;
 $base_color: #241915;
-// $title_color: #4A5778;
+$title_color: #4A5778;
 $white_color: #FFFFFF;
 $black_color: #000000;
-// $red_color: #E60012;
-$main_gradient: linear-gradient(90deg, #008DD4 0%, #3A982A 100%);
+$red_color: #E60012;
 
-$btn_gray_color: #E6E6E6;
-$news_gray_color: #F5F5F5;
+// $gray_color: #B3B3B3;
 // $green_color: #82CE98;
 // $orange_color: #FF7100;
 // $pink_color: #FF7BAC;

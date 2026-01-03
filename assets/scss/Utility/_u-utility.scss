@@ -156,15 +156,6 @@ figure img,
   list-style: disc;
   padding-left: 1.5em;
 }
-
-.h-opacity a, a.h-opacity {
-  transition: opacity .3s;
-
-  &:hover {
-    opacity: .7;
-  }
-}
-
 .u-line{
   padding-left: 2px;
     display: inline;
@@ -180,3 +171,14 @@ figure img,
     background-position: center;
   }
 
+.h-opacity a, a.h-opacity {
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.ff-en {
+  font-family: $font_en;
+}

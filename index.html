@@ -23,10 +23,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" /> -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
@@ -37,7 +36,14 @@
 </head>
 <body>
 
-    <div id="loading"></div>
+    <div id="loading">
+        <div class="inner">
+            <div class="logo">
+                <img class="logo-base" src="./assets/img/top/loading-logo-base.svg" alt="">
+                <img class="logo-line" src="./assets/img/top/loading-logo-line.svg" alt="">
+            </div>
+        </div>
+    </div>
 
     <nav id="nav" class="tb">
         <div class="sec-inner">
@@ -47,63 +53,81 @@
 
     <header id="header">
         <div class="sec-inner">
-            <div class="sec-box">
-                <div class="sec-logo">
-                    <a href="" class="h-opacity"><img src="./assets/img/common/logo.svg" alt="株式会社山登ゴム" class="u-img-contain"></a>
-                </div>
-                <div class="sec-list">
-                    <div class="item plus"><span class="txt">山登ゴムができること</span></div>
-                    <div class="item plus"><span class="txt">山登ゴムの強み</span></div>
-                    <div class="item"><span class="txt">製品事例・設備</span></div>
-                    <div class="item plus"><span class="txt">会社情報</span></div>
-                    <div class="item"><span class="txt">サステナビリティへの<br>取り組み</span></div>
-                    <div class="item"><span class="txt">お知らせ</span></div>
-                    <div class="item"><span class="txt">採用情報</span></div>
-                </div>
-            </div>
-            <a href="" class="sec-btn"><span class="txt">お問い合わせ</span></a>
+            <a href="" class="logo"><h1><img src="./assets/img/common/logo.svg" alt="山登ゴム"></h1></a>
+            <ul class="sec-list">
+                <li class="item"><a href="" class="link">山登ゴムが<br class="br">できること<span></span></a></li>
+                <li class="item"><a href="" class="link">山登ゴムの<br class="br">強み<span></span></a></li>
+                <li class="item"><a href="" class="link">製品事例・<br class="br">設備</a></li>
+                <li class="item"><a href="" class="link">会社情報<span></span></a></li>
+                <li class="item"><a href="" class="link">サステナビリティへの<br>取り組み</a></li>
+                <li class="item"><a href="" class="link">お知らせ</a></li>
+                <li class="item"><a href="" class="link">採用情報</a></li>
+            </ul>
+            <a href="" class="contact">お問い合わせ</a>
         </div>
     </header>
 
     <div id="mv">
+        <div id="bg" class="sec-bg">
+            <img src="./assets/img/top/mv.png" alt="「信頼の絆」と「こだわりのモノづくり」で未来を創る。">
+            <img src="./assets/img/top/mv.png" alt="「信頼の絆」と「こだわりのモノづくり」で未来を創る。">
+        </div>
         <div class="sec-inner">
-            <div class="inner-bg"></div>
             <p class="sec-text">
                 <span>「信頼の絆」と</span>
                 <span>「こだわりのモノづくり」で</span>
-                <span class="pl">未来を創る。</span>
+                <span>未来を創る。</span>
             </p>
-            <h2 class="sec-title">
-                <img src="./assets/img/index/mv-text.png" alt="山登ゴム" class="u-img-contain">
-            </h2>
+            <h2 class="sec-title">YAMATO GOMU</h2>
         </div>
     </div>
 
     <main id="main-top">
 
-        <section id="introduction" class="section-1 c-section">
+        <section id="introduction" class="c-section">
             <div class="sec-inner c-inner">
                 <p class="sec-text">
                     世界的に認められている、日本のモノづくり。<br><br>わたしたち山登ゴムは、<br>主に自動車ゴム部品の製造を通して、<br>日本のモノづくり産業に貢献しています。<br><br><span class="u-line">圧倒的な品質へのこだわり。</span><br><span class="u-line">徹底的に考え抜かれた設計。</span><br><span class="u-line">実用的でニーズに寄り沿ったモノづくり。</span><br><br>すべては、<br>”価格だけで選ばれない会社でありたい”<br>という信念に根づいています。<br><br>これからも技術を磨き続け、<br>誇り高い”信頼とこだわりの製品”を<br>お客様へお届けします。
                 </p>
+
+                <!-- 共通パーツ -->
+                <!-- <p class="c-subtitle-ellipse">サステナビリティへの取り組み</p>
+                <h2 class="c-title">「信頼の絆」と<br>「こだわりのモノづくり」で未来を創る。</h2>
+                <p>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+
+                <h2 class="c-title-ellipse">山登ゴムができること</h2>
+
+                <a href="" class="c-btn">お知らせ一覧を見る<span class="arw"></span></a> -->
+
             </div>
         </section>
-        <section id="service" class="section-1 c-section">
-            <div class="sec-slide">
-                <img src="./assets/img/" alt="" class="u-img-cover">
+
+        <section id="service">
+            <div class="sec-img">
+                <img src="./assets/img/top/service-1.jpg" class="u-img-cover" alt="">
+                <img src="./assets/img/top/service-2.jpg" class="u-img-cover" alt="">
+                <img src="./assets/img/top/service-3.jpg" class="u-img-cover" alt="">
+                <img src="./assets/img/top/service-4.jpg" class="u-img-cover" alt="">
             </div>
-            <div class="sec-inner c-inner">
-                <div class="sec-box-1">
-                    <div class="texts">
-                        <h3 class="title">山登ゴムができること</h3>
-                        <p class="catch">試作から量産化までの、多岐に<br class="pc">わたるご要望にスピーディに対応。</p>
-                        <p class="text">ご要望を丁寧にヒアリングし、お客様の求めている理想を形にします。<br>製品の試作のみから量産化まで、幅広いニーズにお応えいたします。</p>
+            <div class="sec-outer c-section">
+                <div class="sec-box c-box">
+                    <div class="sec-box-inner">
+                        <div class="inner-top">
+                            <div class="texts">
+                                <p class="c-subtitle-ellipse">山登ゴムができること</p>
+                                <h2 class="c-title">試作から量産化までの、多岐に<br class="pc">わたるご要望にスピーディに対応。</h2>
+                                <p>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+                            </div>
+                            <a href="" class="c-btn btn">お知らせ一覧を見る<span class="arw"></span></a>
+                        </div>
+                        <ul class="c-btnlist">
+                            <li><a href="" class="c-btnlist-btn">代表挨拶<span class="arw"></span></a></li>
+                            <li><a href="" class="c-btnlist-btn">代表挨拶<span class="arw"></span></a></li>
+                            <li><a href="" class="c-btnlist-btn">代表挨拶<span class="arw"></span></a></li>
+                            <li><a href="" class="c-btnlist-btn">代表挨拶<span class="arw"></span></a></li>
+                        </ul>
                     </div>
-                    <a href="" class="c-btn"><span class="txt">山登ゴムができること</span><span class="arrow"></span></a>
-                </div>
-                <div class="sec-box-2 c-links">
-                    <a href="" class="link"><span class="txt">試作</span><span class="arrow"></span></a>
-                    <a href="" class="link"><span class="txt">量産</span><span class="arrow"></span></a>
+    
                 </div>
             </div>
         </section>
