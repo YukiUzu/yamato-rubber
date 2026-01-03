@@ -172,6 +172,16 @@ figure img,
   opacity: 0.7;
 }
 
+.u-line {
+  padding-left: 2px;
+  display: inline;
+  color: #FFFFFF;
+  background: linear-gradient(to right, #008DD4, #3A982A);
+  background-repeat: no-repeat;
+  background-size: 100% 1.25em;
+  background-position: center;
+}
+
 .c-section {
   padding: 0 2.5rem;
 }
