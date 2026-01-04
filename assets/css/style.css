@@ -196,6 +196,11 @@ figure img,
   margin: 0 auto;
 }
 
+.c-inner-s {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 .c-heading {
   max-width: 1920px;
   margin: 17.7rem auto 0;
